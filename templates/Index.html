@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+		<link rel="stylesheet" href="{{url_for('static', filename = 'form.css') }}" media="screen">
+		<link rel="icon" type="image/ico" href="{{url_for('static', filename = 'images/favicon.ico') }}">
+
+</head>
+
+<style>
+	.heading{
+		display: flex;
+	}
+	.heading h1{
+		flex-grow: 1;
+	}
+	.heading button{
+		margin-top: 25px;
+	}
+	.heading a:link, a:active, a:visited, a:hover{
+		text-decoration: none;
+	}
+	
+	</style>	
+
+	
+<body style="padding: 1% 5%">
+	<div class="heading">
+	<h1 align="center" style="color: #ff4d4d">Soft Skills Hunt</h1>
+		
+	<div align="right"><button style="background-color: #ff4d4d; padding: 5px; border-radius: 5px;"><a href="/login">Admin Login</a></button></div>
+	</div>
+	<p align="center">Looking to test your soft skills. This application is for people who want to test their soft skills knowledge without any failure. Fill the details and the play the quiz to assess your soft skills.</p>
+	<div style="padding: 1% 2%">
+	<div class="formContainer" style="padding: 2%;">
+		<form action="{{url_for('index')}}" method="post">
+			<div class="row">
+				<div class="col-25">
+			<label for="user">Name</label>
+				</div>
+				<div class="col-75">
+			<input type="text" name="name" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+			<label for="email">Email</label>
+				</div>
+				<div class="col-75">
+			<input type="email" name="email" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class = "col-25">
+			<label for="pwd">Phone Number</label>
+				</div>
+				<div class = "col-75">
+			<input type="tel" name="phno" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+			<label for="age">Age</label>
+				</div>
+				<div class="col-75">
+			<input type="number" name="age" required>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+			<input type="submit" name="submit" style="margin: 0 auto" value="Play Game">
+				</div>
+		</form>
+		
+		</div>
+	</div>
+</body>
+</html>
